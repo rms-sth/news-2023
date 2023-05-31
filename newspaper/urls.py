@@ -48,4 +48,9 @@ urlpatterns = [
         views.CommentView.as_view(),
         name="comment",
     ),
+    path(
+        "post-search/",
+        views.PostSearchView.as_view(),
+        name="post-search",
+    ),
 ]

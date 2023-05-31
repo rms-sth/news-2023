@@ -116,9 +116,8 @@
               <div class="header-right-btn f-right d-none d-lg-block">
                 <i class="fas fa-search special-tag"></i>
                 <div class="search-box">
-                  <form action="#">
-                    <input type="text" placeholder="Search">
- 
+                  <form action="{% url 'post-search' %}" method="GET">
+                    <input type="text" placeholder="Search" name="query" value="{{ query }}">
                   </form>
                 </div>
               </div>

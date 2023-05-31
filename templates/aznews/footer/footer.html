@@ -1,3 +1,5 @@
+{% load static %}
+
 <footer>
   <!-- Footer Start-->
   <div class="footer-area footer-padding fix">
@@ -9,7 +11,7 @@
               <!-- logo -->
               <div class="footer-logo">
                 <a href="index.html">
-                  <img src="assets/img/logo/logo2_footer.png" alt="">
+                  <img src="{% static 'aznews/assets/img/logo/logo2_footer.png' %}" alt="">
                 </a>
               </div>
               <div class="footer-tittle">
@@ -32,14 +34,16 @@
           <div class="single-footer-caption mt-60">
             <div class="footer-tittle">
               <h4>Newsletter</h4>
-              <p>Heaven fruitful doesn't over les idays appear creeping</p>
+              <p>Subscribe to our Newsletter</p>
+              <div id="newsletter_bottom_form_message"></div>
               <!-- Form -->
               <div class="footer-form">
                 <div id="mc_embed_signup">
-                  <form target="_blank"
-                        action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                        method="get"
-                        class="subscribe_form relative mail_part">
+                  <form action=""
+                        method="post"
+                        class="subscribe_form relative mail_part"
+                        id="newsletter_bottom_form">
+                    {% csrf_token %}
                     <input type="email"
                            name="email"
                            id="newsletter-form-email"
@@ -52,7 +56,7 @@
                               name="submit"
                               id="newsletter-submit"
                               class="email_icon newsletter-submit button-contactForm">
-                        <img src="assets/img/logo/form-iocn.png" alt="">
+                        <img src="{% static 'aznews/assets/img/logo/form-iocn.png' %}" alt="">
                       </button>
                     </div>
                     <div class="mt-10 info"></div>
@@ -71,32 +75,32 @@
               <ul class="insta-feed">
                 <li>
                   <a href="#">
-                    <img src="assets/img/post/instra1.jpg" alt="">
+                    <img src="{% static 'aznews/assets/img/post/instra1.jpg' %}" alt="">
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="assets/img/post/instra2.jpg" alt="">
+                    <img src="{% static 'aznews/assets/img/post/instra2.jpg' %}" alt="">
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="assets/img/post/instra3.jpg" alt="">
+                    <img src="{% static 'aznews/assets/img/post/instra3.jpg' %}" alt="">
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="assets/img/post/instra4.jpg" alt="">
+                    <img src="{% static 'aznews/assets/img/post/instra4.jpg' %}" alt="">
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="assets/img/post/instra5.jpg" alt="">
+                    <img src="{% static 'aznews/assets/img/post/instra5.jpg' %}" alt="">
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="assets/img/post/instra6.jpg" alt="">
+                    <img src="{% static 'aznews/assets/img/post/instra6.jpg' %}" alt="">
                   </a>
                 </li>
               </ul>
