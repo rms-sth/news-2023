@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # third party library
+    "django_summernote",
+    # custom apps
     "newspaper",
     "blog_app",
 ]
@@ -133,3 +136,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGIN_REDIRECT_URL = "/news-admin"
 LOGOUT_REDIRECT_URL = "/news-admin"
+
+
+# SUMMERNOTE_CONFIG = {
+#     # Change editor size
+#     "width": "200%",
+#     "height": "480",
+# }

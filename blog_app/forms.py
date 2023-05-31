@@ -1,6 +1,7 @@
 from django import forms
 
 from newspaper.models import Post
+from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 
 class PostForm(forms.ModelForm):
@@ -16,6 +17,7 @@ class PostForm(forms.ModelForm):
                     "required": True,
                 }
             ),
+            "content": SummernoteWidget(),
             "status": forms.Select(attrs={"class": "form-control"}),
             "category": forms.Select(attrs={"class": "form-control"}),
             "tag": forms.SelectMultiple(attrs={"class": "form-control"}),
