@@ -38,10 +38,12 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # third party library
+    "rest_framework",
     "django_summernote",
     # custom apps
     "newspaper",
     "blog_app",
+    "api",
 ]
 
 MIDDLEWARE = [
@@ -143,3 +145,13 @@ LOGOUT_REDIRECT_URL = "/news-admin"
 #     "width": "200%",
 #     "height": "480",
 # }
+
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+    messages.DEBUG: "secondary",
+    messages.INFO: "info",
+    messages.SUCCESS: "success",
+    messages.WARNING: "warning",
+    messages.ERROR: "danger",
+}

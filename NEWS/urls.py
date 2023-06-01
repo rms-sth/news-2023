@@ -23,6 +23,7 @@ from django.contrib.auth import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
+    path('api/v1/', include('api.urls')),
     path("accounts/login/", views.LoginView.as_view(), name="login"),
     path("accounts/logout/", views.LogoutView.as_view(), name="logout"),
     path("", include("newspaper.urls")),
